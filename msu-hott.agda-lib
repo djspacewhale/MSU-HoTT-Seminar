@@ -1,0 +1,4 @@
+name: msu-hott
+depend: agda-unimath
+include: src
+flags: --without-K --exact-split
