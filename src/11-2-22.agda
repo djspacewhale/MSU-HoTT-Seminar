@@ -19,11 +19,11 @@ mult zero y = zero
 mult (suc x) y = add (mult x y) y
 
 --We know when numbers are strictly less than each other now.
-_le_ : ℕ → ℕ → bool
-zero le zero = false
-zero le suc y = true
-suc x le zero = false
-suc x le suc y = x le y
+_leq_ : ℕ → ℕ → UU
+zero leq zero = unit
+zero leq suc y = unit
+suc x leq zero = empty 
+suc x leq suc y = x leq y
 
 --Next week: We'll define strong and weak induction, and
 --prove that they imply each other! What next...?
