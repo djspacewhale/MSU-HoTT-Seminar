@@ -1,4 +1,3 @@
-```agda
 {-# OPTIONS --without-K --exact-split #-}
 
 module 10-26-22 where
@@ -55,4 +54,3 @@ add-comm zero b = lemma b
 add-comm (suc a) zero = app suc (add-comm a zero)
 add-comm (suc a) (suc b) = app suc (trans (symm (ladd-radd a b)) 
                                    (trans (app suc (add-comm a b)) (ladd-radd b a)))
-```
